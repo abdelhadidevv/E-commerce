@@ -89,7 +89,11 @@ function App() {
             <Route
               index
               element={
-                <Products products={products} onAddToCart={handleAddToCart} />
+                <Products
+                  products={products}
+                  onAddToCart={handleAddToCart}
+                  handleUpdateCartQty
+                />
               }
             />
             <Route
@@ -97,9 +101,9 @@ function App() {
               element={
                 <Cart
                   cart={cart}
-                  handleUpdateCartQty={handleUpdateCartQty}
-                  handleRemoveFromCart={handleRemoveFromCart}
-                  handleEmptyCart={handleEmptyCart}
+                  onUpdateCartQty={handleUpdateCartQty}
+                  onRemoveFromCart={handleRemoveFromCart}
+                  onEmptyCart={handleEmptyCart}
                 />
               }
             />
